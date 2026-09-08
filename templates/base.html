@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lange="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title %}My Portfolio{% endblock%}</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a href="/certificates">Certificates</a>
+        <a href="/contact">Contact</a>
+        <a href="/resume">Resume</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; Craig Nigel De Leon </p>
+    </footer>
+
+</body>
+</html>

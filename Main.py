@@ -8,7 +8,12 @@ def home():
 
 @app.route("/projects")
 def project():
-    return render_template("projects.html")
+    projects = [
+        {"title": "Project name", "description": "Insert project description"},
+        {"title": "Project name", "description": "Insert project description"},
+        {"title": "Project name", "description": "Insert project description"},
+    ]
+    return render_template("projects.html", projects=projects)
 
 @app.route("/certificates")
 def certificates():

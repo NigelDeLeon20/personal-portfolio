@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -8,19 +9,7 @@ def home():
 
 @app.route("/projects")
 def project():
-    projects = [
-        {"title1": "Project name",
-         "description": "Insert project description",
-         "repo_url": "Insert Link"},
-
-        {"title2": "Project name",
-         "description": "Insert project description",
-         "repo_url": "Insert Link"},
-
-        {"title3": "Project name",
-         "description": "Insert project description",
-         "repo_url": "Insert Link"},
-    ]
+    projects = load_projects()
     return render_template("projects.html", projects=projects)
 
 @app.route("/certificates")
@@ -39,6 +28,10 @@ def contact():
 @app.route("/resume")
 def resume():
     return render_template("resume.html")
+
+def load_projects():
+    with open("data/projects.json") as f:
+        return json.load(f)
 
 if __name__ == "__main__":
     app.run(debug=True)

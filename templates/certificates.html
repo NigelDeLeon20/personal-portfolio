@@ -4,4 +4,10 @@
 {% block content %}
 <h1>Certificates</h1>
 <p>Gained certificates: </p>
+{% for certificate in certificates %}
+    <div>
+        <h2>{{ certificate.title }}</h2>
+        <p>{{ certificate.description }}</p>
+    </div>
+{% endfor %}
 {% endblock %}

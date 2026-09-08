@@ -9,15 +9,28 @@ def home():
 @app.route("/projects")
 def project():
     projects = [
-        {"title": "Project name", "description": "Insert project description"},
-        {"title": "Project name", "description": "Insert project description"},
-        {"title": "Project name", "description": "Insert project description"},
+        {"title1": "Project name",
+         "description": "Insert project description",
+         "repo_url": "Insert Link"},
+
+        {"title2": "Project name",
+         "description": "Insert project description",
+         "repo_url": "Insert Link"},
+
+        {"title3": "Project name",
+         "description": "Insert project description",
+         "repo_url": "Insert Link"},
     ]
     return render_template("projects.html", projects=projects)
 
 @app.route("/certificates")
 def certificates():
-    return render_template("certificates.html")
+    certificates = [
+            {"title": "Certificate name", "description": "Insert certificate description"},
+            {"title": "Certificate name", "description": "Insert certificate description"},
+            {"title": "Certificate name", "description": "Insert certificate description"},
+        ]
+    return render_template("certificates.html", certificates=certificates)
 
 @app.route("/contact")
 def contact():

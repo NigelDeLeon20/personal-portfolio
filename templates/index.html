@@ -1,12 +1,51 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html lang=""en>
-    <head>
-        <meta charset="UTF-8">
-        <title>My Portfolio</title>
-    </head>
-    <body>
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is a simple portfolio website built with Flask.</p>
-    </body>
-</html>
+{% block content %}
+
+<!-- For Homoe page/introduction -->
+    <section id="home">
+        <h1>Craig Nigel De Leonn</h1>
+        <p>Computer Science Undergraduate</p>
+    </section>
+
+    <!-- For presenting projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        {% for project in projects %}
+            <div>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <a href="{{ project.repo_url }}">View on GitHub</a>
+
+                {% if project.live_url %}
+                    <a href="{{ project.live_url }}">View Live</a>
+                {% else %}
+                    <p>Live demo not available...</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </section>
+
+    <!-- For certificates -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        {% for certificate in certificates %}
+            <div>
+                <h3>{{ certificate.title }}</h3>
+                <p>{{ certificate.description }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>My resume: </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: </p>
+        
+    </section>
+
+    {% endblock %}

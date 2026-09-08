@@ -1,11 +1,14 @@
 [
-    {"title": "Certificate name", 
-    "description": "Insert certificate description"
-},
-    {"title": "Certificate name", 
-    "description": "Insert certificate description"
-},
-    {"title": "Certificate name", 
-    "description": "Insert certificate description"
-}
-    ]
+    {
+        "title": "Certificate 1",
+        "description": "Insert certificate description"
+    }, 
+    {
+        "title": "Certificate 2",
+        "description": "Insert certificate description"
+    },
+    {
+        "title": "Certificate 3",
+        "description": "Insert certificate description"
+    }
+]

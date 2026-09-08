@@ -5,25 +5,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
-
-@app.route("/projects")
-def project():
     projects = load_projects()
-    return render_template("projects.html", projects=projects)
-
-@app.route("/certificates")
-def certificates():
     certificates = load_certificates()
-    return render_template("certificates.html", certificates=certificates)
-
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-@app.route("/resume")
-def resume():
-    return render_template("resume.html")
+    return render_template("index.html", projects=projects, certificates=certificates)
 
 def load_projects():
     with open("data/projects.json") as f:

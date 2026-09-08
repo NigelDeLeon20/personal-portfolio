@@ -14,11 +14,7 @@ def project():
 
 @app.route("/certificates")
 def certificates():
-    certificates = [
-            {"title": "Certificate name", "description": "Insert certificate description"},
-            {"title": "Certificate name", "description": "Insert certificate description"},
-            {"title": "Certificate name", "description": "Insert certificate description"},
-        ]
+    certificates = load_certificates()
     return render_template("certificates.html", certificates=certificates)
 
 @app.route("/contact")
@@ -31,6 +27,10 @@ def resume():
 
 def load_projects():
     with open("data/projects.json") as f:
+        return json.load(f)
+
+def load_certificates():
+    with open("data/certificates.json") as f:
         return json.load(f)
 
 if __name__ == "__main__":

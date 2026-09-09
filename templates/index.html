@@ -61,6 +61,21 @@
     <section id="resume">
         <h2>Resume</h2>
         <p>My resume: </p>
+        <button onclick="document.getElementById('resume-modal').style.display='flex'">
+            View Resume
+        </button>
+
+        <div id="resume-modal" class="modal">
+            <div class="modal-content">
+                <button onclick="document.getElementById('resume-modal').style.display='none'">
+                    Close
+                </button>
+                <iframe src="{{ url_for('static', filename='resume/resume.pdf')}}" width="100%" height="600px">
+                    
+                </iframe>
+            </div>
+        </div>
+
     </section>
 
     <section id="contact">

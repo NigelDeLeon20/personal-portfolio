@@ -26,6 +26,27 @@
         {% endfor %}
     </section>
 
+    <!-- For experience -->
+    <section id="Experience">
+        <h2>Experience</h2>
+        {% for experience in experiences %}
+            <div>
+                <h3>{{ experience.title }}</h3>
+                <p>{{ experience.description }}</p>
+            </div>
+        {% endfor %}
+    </section>
+
+    <!-- For skills -->
+    <section id="Skills">
+        <h2>Skills</h2>
+        {% for skill in skills %}
+            <div>
+                <h3>{{ skill.name }}</h3>
+                <p>{{ skill.description }}</p>
+            </div>
+        {% endfor %}
+
     <!-- For certificates -->
     <section id="certificates">
         <h2>Certificates</h2>

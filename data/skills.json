@@ -1,0 +1,14 @@
+[
+    {
+        "category": "Languages",
+        "skills_list": ["Python", "Java", "HTML", "CSS"]        
+    },
+    {
+        "category": "Frameworks",
+        "skills_list": ["Flask", "Django", "Jinja2"]
+    },
+    {
+        "category": "Tools",
+        "skills_list": ["Git", "VS Code", "Docker", "IntelliJ IDEA"]
+    }
+]

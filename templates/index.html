@@ -27,25 +27,28 @@
     </section>
 
     <!-- For experience -->
-    <section id="Experience">
+    <section id="experience">
         <h2>Experience</h2>
-        {% for experience in experiences %}
+        {% for exp in  experience %}
             <div>
-                <h3>{{ experience.title }}</h3>
-                <p>{{ experience.description }}</p>
+                <h3>{{ exp.title }}</h3>
+                <p>{{ exp.description }}</p>
+                <p>{{ exp.date }}</p>
+                <p>{{ exp.company }}</p>
             </div>
         {% endfor %}
     </section>
 
     <!-- For skills -->
-    <section id="Skills">
+    <section id="skills">
         <h2>Skills</h2>
-        {% for skill in skills %}
+        {% for group in skills %}
             <div>
-                <h3>{{ skill.name }}</h3>
-                <p>{{ skill.description }}</p>
+                <h3>{{ group.category }}</h3>
+                <p>{{ group.skills_list | join(', ') }}</p>
             </div>
         {% endfor %}
+    </section>
 
     <!-- For certificates -->
     <section id="certificates">
